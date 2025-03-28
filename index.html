@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CMYK Video Channel Extractor</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>CMYK Video Channel Extractor</h1>
+    <input type="file" id="videoInput" accept="video/mp4, video/webm, video/*">
+    <select id="channelSelect">
+      <option value="0">CMYK-C (Cyan)</option>
+      <option value="1">CMYK-M (Magenta)</option>
+      <option value="2">CMYK-Y (Yellow)</option>
+    </select>
+    <button id="processBtn">Process Video</button>
+    <div id="statusBar">Ready</div>
+    <div class="video-container">
+      <div class="player">
+        <h2>Original</h2>
+        <video id="originalVideo" controls muted></video> <!-- Added muted for easier testing -->
+      </div>
+      <div class="player">
+        <h2>Processed Channel</h2>
+        <canvas id="processedCanvas"></canvas>
+      </div>
+    </div>
+  </div>
+  <script src="app.js" type="module"></script>
+</body>
+</html>
